@@ -1,57 +1,114 @@
 # Copilot Instructions for Portfolio 2025
 
 ## Project Overview
-This is a personal portfolio website built with **React 19**, **Vite**, and **Tailwind CSS**. It features modern UI design with glassmorphism effects, animations using **Framer Motion**, and icons from **Lucide React**.
+Personal portfolio SPA for Mamadou Ba (AI Developer & CS Student at CUNY CSI). Built with React 18, Vite 5, Tailwind CSS 3, Framer Motion, and react-icons. Features dark/light theme toggle, animated sections, and professional AI-themed design.
 
-## Architecture & Core Components
-- **Entry Point**: `src/main.jsx` mounts the React application.
-- **Main Layout**: `src/App.jsx` contains the single-page layout, including sections for Hero, About, Projects, and Contact.
-- **Routing**: Currently a single-page application (SPA) without client-side routing.
-- **State Management**: Local component state (React `useState`, `useEffect`) is sufficient for current complexity.
+## Architecture
+```
+src/
+├── components/
+│   ├── Navbar.jsx      # Floating pill navbar with theme toggle
+│   ├── Hero.jsx        # Hero section with animated brain SVG
+│   ├── Projects.jsx    # Featured project + project grid
+│   ├── TechStack.jsx   # Categorized tech icons (Languages, AI/ML, Tools)
+│   ├── About.jsx       # Bio, location, resume download
+│   ├── Footer.jsx      # Contact CTA, social links
+│   └── index.js        # Barrel exports
+├── App.jsx             # Root component, theme state
+├── main.jsx            # React entry point
+└── index.css           # Tailwind + custom styles
+```
 
-## Tech Stack & Dependencies
-- **Framework**: React 19 (via Vite)
-- **Styling**: Tailwind CSS v3
-- **Animations**: Framer Motion (`framer-motion`)
-- **Icons**: Lucide React (`lucide-react`)
-- **Build Tool**: Vite (using `rolldown-vite`)
-- **Linting**: ESLint (Flat Config)
+## Key Files
+| File | Purpose |
+|------|---------|
+| `tailwind.config.js` | Custom colors: `navy`, `cyan`, `slate` variants |
+| `vite.config.js` | `base: "/portfolio-2025/"` for GitHub Pages |
+| `package.json` | Deploy scripts: `npm run deploy` |
 
-## Development Workflow
-- **Start Dev Server**: `npm run dev` (runs on `localhost:5173`)
-- **Build for Production**: `npm run build` (outputs to `dist/`)
-- **Preview Build**: `npm run preview`
-- **Lint Code**: `npm run lint`
+## Color Palette
+```js
+navy: '#0a192f'      // Primary background
+navy-light: '#112240' // Card backgrounds
+cyan: '#64ffda'       // Accent color
+slate: '#8892b0'      // Body text
+slate-light: '#ccd6f6' // Headings
+```
 
-## Coding Conventions & Patterns
+## Commands
+```bash
+npm run dev      # Dev server at localhost:5173
+npm run build    # Production build to dist/
+npm run deploy   # Build + deploy to GitHub Pages
+npm run lint     # ESLint check
+```
 
-### Styling (Tailwind CSS)
-- Use utility classes for all styling.
-- **Glassmorphism**: Use the custom `glass` and `glassBorder` colors defined in `tailwind.config.js`.
-  - Example: `bg-glass border border-glassBorder`
-- **Gradients**: Use Tailwind's gradient utilities (e.g., `bg-gradient-to-r`).
-- **Responsive Design**: Mobile-first approach using standard Tailwind breakpoints (`md:`, `lg:`).
+## Theme Toggle Pattern
+```jsx
+// App.jsx passes theme to all components
+const [darkMode, setDarkMode] = useState(true);
+<Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
-### Components
-- Use **Functional Components** with Hooks.
-- File extension: `.jsx` for components.
-- Keep components small and focused. Extract reusable UI parts (like `TechBadge` in `src/App.jsx`) into separate components if they grow.
+// Components use conditional classes
+className={darkMode ? 'bg-navy text-slate-light' : 'bg-gray-50 text-gray-900'}
+```
 
-### Animations (Framer Motion)
-- Import `motion` from `framer-motion`.
-- Use `<motion.div>` (or other HTML elements) for animated containers.
-- Define animation variants for complex sequences.
+## Component Patterns
 
-### Icons
-- Import specific icons from `lucide-react`.
-- Example: `import { Github, Mail } from 'lucide-react';`
-- Style icons using Tailwind classes (e.g., `className="w-6 h-6 text-gray-400"`).
+### Animated Sections (Framer Motion)
+```jsx
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+>
+```
 
-## Configuration Files
-- `vite.config.js`: Vite configuration. Note the `base: '/portfolio-2025/'` setting for deployment.
-- `tailwind.config.js`: Tailwind theme extensions (colors, fonts).
-- `eslint.config.js`: ESLint rules and plugins.
+### Project Cards
+```jsx
+// Projects.jsx - data structure
+const projects = [
+  {
+    title: "Project Name",
+    description: "Description",
+    tech: ["Python", "TensorFlow"],
+    github: "https://github.com/...",
+    live: "#",  // optional
+    icon: <HiOutlineChartBar className="w-8 h-8" />,
+    featured: true  // shows in large featured card
+  }
+];
+```
+
+### Tech Stack Icons
+```jsx
+// TechStack.jsx - use react-icons Si* for brands
+import { SiPython, SiTensorflow } from 'react-icons/si';
+{ name: "Python", icon: SiPython, color: "#3776AB" }
+```
+
+## Icons
+- **Brand icons**: `react-icons/si` (SiPython, SiTensorflow, etc.)
+- **UI icons**: `react-icons/fi` (FiGithub, FiMail, FiDownload)
+- **Outline icons**: `react-icons/hi` (HiOutlineChartBar, etc.)
 
 ## Deployment
-- The project is configured for deployment to GitHub Pages (implied by `base` in `vite.config.js`).
-- Ensure assets are correctly referenced relative to the base path.
+```bash
+npm run deploy  # Runs predeploy (build) then gh-pages -d dist
+```
+- Deployed to: `https://mamadouba2004.github.io/portfolio-2025/`
+- All asset paths must work with `/portfolio-2025/` base
+
+## Adding Content
+
+### New Project
+Edit `projects` array in `src/components/Projects.jsx`
+
+### New Tech Icon  
+Add to `techCategories` in `src/components/TechStack.jsx`
+
+### Update Personal Info
+- Email/links: `Footer.jsx`, `Navbar.jsx`
+- Bio text: `About.jsx`
+- Hero tagline: `Hero.jsx`
