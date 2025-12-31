@@ -23,7 +23,7 @@ const Hero = ({ darkMode }) => {
               transition={{ delay: 0.2 }}
               className={`text-cyan font-mono mb-4`}
             >
-              Hi, my name is
+              Hi, my name is Mamadou
             </motion.p>
             
             <motion.h1 
