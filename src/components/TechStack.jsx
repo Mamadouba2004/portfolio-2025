@@ -52,7 +52,6 @@ const TechStack = ({ darkMode }) => {
           className="mb-12 text-center"
         >
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${darkMode ? 'text-slate-light' : 'text-navy'}`}>
-            <span className="text-cyan font-mono text-xl mr-2">03.</span>
             Technologies I Work With
           </h2>
         </motion.div>

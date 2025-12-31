@@ -126,7 +126,6 @@ const Projects = ({ darkMode }) => {
           className="mb-12"
         >
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${darkMode ? 'text-slate-light' : 'text-navy'}`}>
-            <span className="text-cyan font-mono text-xl mr-2">02.</span>
             Projects I've Built
           </h2>
           <p className={`max-w-2xl ${darkMode ? 'text-slate' : 'text-gray-600'}`}>
