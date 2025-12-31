@@ -50,7 +50,7 @@ const Footer = ({ darkMode }) => {
           </motion.a>
           
           <motion.a
-            href="https://www.linkedin.com/in/mamadouba"
+            href="https://www.linkedin.com/in/ba-mamadou2004/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -3 }}
@@ -78,7 +78,9 @@ const Footer = ({ darkMode }) => {
           </motion.a>
           
           <motion.a
-            href="#"
+            href="/portfolio-2025/Mamadou_Ba_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ y: -3 }}
             className={`p-3 rounded-full transition-colors ${
               darkMode 

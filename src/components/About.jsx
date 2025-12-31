@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMapPin, FiBriefcase } from 'react-icons/fi';
+import headshotImg from '../assets/mamadou-headshot.png';
 
 const About = ({ darkMode }) => {
   return (
@@ -27,28 +28,20 @@ const About = ({ darkMode }) => {
             className="md:col-span-2 flex justify-center"
           >
             <div className="relative group">
-              {/* Image placeholder - replace src with actual headshot */}
-              <div className={`w-64 h-64 rounded-2xl overflow-hidden border-2 transition-all duration-300 ${
+              <div className={`w-64 h-64 rounded-full overflow-hidden border-4 transition-all duration-300 ${
                 darkMode 
                   ? 'border-cyan/50 group-hover:border-cyan' 
                   : 'border-navy/50 group-hover:border-navy'
               }`}>
-                <div className={`w-full h-full flex items-center justify-center text-6xl ${
-                  darkMode ? 'bg-navy-light' : 'bg-gray-100'
-                }`}>
-                  👨‍💻
-                </div>
-                {/* Replace above div with actual image:
                 <img 
-                  src="/path/to/headshot.jpg" 
-                  alt="Mamadou Ba"
+                  src={headshotImg} 
+                  alt="Mamadou Ba - AI Developer and Computer Science Student"
                   className="w-full h-full object-cover"
-                /> 
-                */}
+                />
               </div>
               
               {/* Decorative border */}
-              <div className={`absolute -inset-4 rounded-2xl border-2 -z-10 transition-all duration-300 ${
+              <div className={`absolute -inset-4 rounded-full border-2 -z-10 transition-all duration-300 ${
                 darkMode 
                   ? 'border-cyan/20 group-hover:border-cyan/40' 
                   : 'border-navy/20 group-hover:border-navy/40'
@@ -93,7 +86,9 @@ const About = ({ darkMode }) => {
 
             {/* Download Resume Button */}
             <motion.a
-              href="#"
+              href="/portfolio-2025/Mamadou_Ba_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium border-2 transition-all duration-300 ${
@@ -107,6 +102,39 @@ const About = ({ darkMode }) => {
             </motion.a>
           </motion.div>
         </div>
+
+        {/* GitHub Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-16"
+        >
+          <h3 className={`text-xl font-bold mb-6 ${darkMode ? 'text-slate-light' : 'text-navy'}`}>
+            GitHub Activity
+          </h3>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <motion.img 
+              src="https://github-readme-stats.vercel.app/api?username=Mamadouba2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a192f" 
+              alt="Mamadou's GitHub Stats"
+              className="rounded-lg"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            />
+            <motion.img 
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mamadouba2004&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a192f" 
+              alt="Top Languages"
+              className="rounded-lg"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
