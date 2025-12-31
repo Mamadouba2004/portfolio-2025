@@ -115,24 +115,42 @@ const About = ({ darkMode }) => {
             GitHub Activity
           </h3>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <motion.img 
-              src="https://github-readme-stats.vercel.app/api?username=Mamadouba2004&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a192f" 
-              alt="Mamadou's GitHub Stats"
-              className="rounded-lg"
+            <motion.a
+              href="https://github.com/Mamadouba2004"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-            />
-            <motion.img 
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mamadouba2004&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a192f" 
-              alt="Top Languages"
-              className="rounded-lg"
+              whileHover={{ scale: 1.03 }}
+              className="transition-transform"
+            >
+              <img 
+                src="https://github-readme-stats.vercel.app/api?username=Mamadouba2004&show_icons=true&theme=tokyonight&hide_border=true" 
+                alt="Mamadou's GitHub Stats"
+                className="rounded-lg max-w-full"
+                loading="lazy"
+              />
+            </motion.a>
+            <motion.a
+              href="https://github.com/Mamadouba2004"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-            />
+              whileHover={{ scale: 1.03 }}
+              className="transition-transform"
+            >
+              <img 
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mamadouba2004&layout=compact&theme=tokyonight&hide_border=true" 
+                alt="Top Languages"
+                className="rounded-lg max-w-full"
+                loading="lazy"
+              />
+            </motion.a>
           </div>
         </motion.div>
       </div>
