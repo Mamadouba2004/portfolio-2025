@@ -9,7 +9,7 @@ export const KB = {
     "What is Mamadou working on?",
     "Tell me about VibeFinder",
     "What kind of role is he looking for?",
-    "Is he available for Summer 2027 internships?",
+    "Is he available for Fall 2026 or Summer 2027 internships?",
     "What's his tech stack?",
   ],
 
@@ -25,13 +25,13 @@ RULES — follow these strictly:
 7. ROLE TARGETING: When asked what roles/jobs Mamadou wants, speak in terms of categories and qualifications (technology consulting, AI/ML engineering, data analytics — client-facing, AI-systems-building work) rather than naming specific target companies. Only name specific companies if the visitor explicitly asks "is he interested in [Company]" or similarly names one first.
 
 === ABOUT MAMADOU BA ===
-Mamadou Ba is a Baruch College student (CUNY) pursuing a CIS-BBA degree with a Data Analytics concentration, expected May 2028. He's targeting a flexible mix of roles across technology consulting, AI/ML engineering, and data analytics — the titles vary by company, but he's qualified for and interested in client-facing, AI-systems-building work across all three. He builds production-minded AI systems — RAG pipelines, LLM agents, and evaluation harnesses — alongside data analytics that drive measurable business impact, and he's drawn to work where he can present solutions to stakeholders, not just write code in isolation. Based in the New York City area. He is open to Summer 2027 internships. Contact: Mamadou.Ba19@login.cuny.edu, phone (347) 940-2875. GitHub: github.com/Mamadouba2004. LinkedIn: linkedin.com/in/ba-mamadou2004.
+Mamadou Ba is a Baruch College student (CUNY) pursuing a CIS-BBA degree with a Data Analytics concentration, expected May 2028. He's targeting a flexible mix of roles across technology consulting, AI/ML engineering, and data analytics — the titles vary by company, but he's qualified for and interested in client-facing, AI-systems-building work across all three. He builds production-minded AI systems — RAG pipelines, LLM agents, and evaluation harnesses — alongside data analytics that drive measurable business impact, and he's drawn to work where he can present solutions to stakeholders, not just write code in isolation. Based in the New York City area. He is open to Fall 2026 and Summer 2027 internships. Contact: Mamadou.Ba19@login.cuny.edu, phone (347) 940-2875. GitHub: github.com/Mamadouba2004. LinkedIn: linkedin.com/in/ba-mamadou2004.
 
 === CURRENT ROLE ===
 Operations Analyst & AI Lead at Apex Forum (Hybrid, March 2025 - Present). He designed and deployed AI automation workflows using Microsoft Copilot Studio and Power Automate, presenting solutions to cross-functional teams and cutting 8+ hours of manual work weekly. He built Python and Power BI analytics pipelines processing podcast and community engagement data, surfacing insights that drove 30% growth in member participation across 5+ programs. He analyzed operational processes to identify automation opportunities and delivered findings to senior leadership in structured reports and briefings, driving a 25% improvement in team efficiency. He also administers the organization's Microsoft 365 environment, managing Teams, SharePoint, and Power Automate integrations.
 
 === UPCOMING INTERNSHIP ===
-Mamadou will be a Project Management Intern at the MTA (Metropolitan Transportation Authority), MTA HQ Supplier Management team in Manhattan, June 29 - August 14, 2026. The role involves analyzing vendor contract utilization and performance trends, tracking deliverables and compliance benchmarks, building Excel and Power BI dashboards, and supporting process automation and reporting.
+Mamadou will START a Project Management Internship at the MTA (Metropolitan Transportation Authority), MTA HQ Supplier Management team in Manhattan, running June 29 - August 14, 2026 (it has not started yet — it is an incoming/upcoming role). The role will involve analyzing vendor contract utilization and performance trends, tracking deliverables and compliance benchmarks, building Excel and Power BI dashboards, and supporting process automation and reporting.
 
 === OTHER EXPERIENCE ===
 - Student Office Assistant, CUNY College of Staten Island (Mar 2025 - May 2026, Part-time, On-site): Audited 100+ hyperlinks across multiple university websites (CGE, ELI, Study Abroad, ISSS) and delivered a color-coded Excel report with confidence ratings to help staff prioritize fixes. Edited and maintained website content using Drupal CMS and formatted course sites on CUNY Academic Commons. Enhanced audio quality for student presentation videos for the ELI YouTube channel, and co-staffed the Spring 2026 Study Abroad Fair engaging 100+ student attendees.
@@ -57,7 +57,7 @@ Baruch College, City University of New York — pursuing a Bachelor of Business 
 
   // Local fallback: keyword-scored fact retrieval (works offline, no API).
   FACTS: [
-    { k: "available internship hiring summer 2027 open work role looking opportunity recruit", a: "Yes — Mamadou is **open to Summer 2027 internships** across technology consulting, AI/ML engineering, and data analytics. The fastest way to reach him is [Mamadou.Ba19@login.cuny.edu](mailto:Mamadou.Ba19@login.cuny.edu)." },
+    { k: "available internship hiring fall 2026 summer 2027 open work role looking opportunity recruit", a: "Yes — Mamadou is **open to Fall 2026 and Summer 2027 internships** across technology consulting, AI/ML engineering, and data analytics. The fastest way to reach him is [Mamadou.Ba19@login.cuny.edu](mailto:Mamadou.Ba19@login.cuny.edu)." },
     { k: "who is mamadou about background bio summary tell yourself", a: "Mamadou Ba is a **Baruch College student** pursuing a CIS-BBA with a Data Analytics concentration, expected May 2028. He builds production-minded AI — RAG pipelines, agents, and eval harnesses — and is targeting client-facing roles across technology consulting, AI engineering, and data analytics." },
     { k: "what kind of job role looking for target career goal interested", a: "Mamadou is targeting a flexible mix of roles across **technology consulting, AI/ML engineering, and data analytics** — exact titles vary by company, but he's qualified for and drawn to client-facing work where he builds AI systems and presents them to stakeholders, not just writes code in isolation." },
     { k: "vibefinder music recommender rag streamlit claude guardrail eval", a: "**VibeFinder** is an end-to-end music-recommender RAG system on the Claude API — with a retrieval pipeline, configurable scoring, and output guardrails validating every response. Mamadou built a 12-check eval harness across 3 adversarial profiles and hit a **100% pass rate** before deploying live on Streamlit." },

@@ -15,7 +15,7 @@ export const PORTFOLIO = {
     tagline: "I build intelligent systems that ship.",
     lede: "CIS-BBA student at Baruch College (CUNY) and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — alongside data analytics that drive measurable business impact.",
     location: "New York City, NY",
-    availability: "Open to Summer 2027 internships",
+    availability: "Open to Fall 2026 & Summer 2027 internships",
     currentRole: "AI Lead @ Apex Forum · since Mar 2025",
     email: "Mamadou.Ba19@login.cuny.edu",
     phone: "(347) 940-2875",
@@ -28,7 +28,7 @@ export const PORTFOLIO = {
   heroMeta: [
     { n: "8+ hrs", l: "saved / week via automation" },
     { n: "$2.3M", l: "cost impact quantified" },
-    { n: "100%", l: "RAG eval pass rate" },
+    { n: "100%", l: "pass rate (VibeFinder eval)" },
   ],
 
   pillars: [
@@ -116,19 +116,19 @@ export const PORTFOLIO = {
 
   experience: [
     {
-      when: "Jun 2026 — Aug 2026", mode: "Manhattan, NY",
+      when: "Starting Jun 2026", mode: "Manhattan, NY · Incoming",
       role: "Project Management Intern", org: "MTA — HQ Supplier Management",
       bullets: [
-        "Analyzing vendor contract utilization and performance trends for the <b>Metropolitan Transportation Authority</b> HQ Supplier Management team.",
-        "Tracking deliverables and compliance benchmarks, building <b>Excel and Power BI</b> dashboards to surface supplier performance data.",
-        "Supporting process automation and reporting workflows across the supplier management function.",
+        "Will analyze vendor contract utilization and performance trends for the <b>Metropolitan Transportation Authority</b> HQ Supplier Management team.",
+        "Will track deliverables and compliance benchmarks, building <b>Excel and Power BI</b> dashboards to surface supplier performance data.",
+        "Will support process automation and reporting workflows across the supplier management function.",
       ],
     },
     {
       when: "Mar 2025 — Present", mode: "Hybrid",
       role: "Operations Analyst & AI Lead", org: "Apex Forum",
       bullets: [
-        "Designed and deployed <b>Copilot Studio</b> and <b>Power Automate</b> AI automation workflows, presenting solutions to cross-functional teams and cutting <b>8+ hours</b> of manual work weekly.",
+        "Designed and deployed <b>Copilot Studio</b> and <b>Power Automate</b> AI automation workflows, cutting <b>8+ hours</b> of manual work weekly.",
         "Built Python and Power BI analytics pipelines processing podcast and community-engagement data, surfacing insights that drove <b>30% growth</b> in member participation across 5+ programs.",
         "Delivered findings to senior leadership in structured reports and briefings, driving a <b>25% improvement</b> in team efficiency.",
         "Administers the organization's Microsoft 365 environment — Teams, SharePoint, and Power Automate integrations.",
@@ -166,6 +166,7 @@ export const PORTFOLIO = {
     degree: "BBA, Computer Information Systems · Data Analytics",
     grad: "Expected May 2028",
     years: "2024 — 2028",
+    prior: "Transferred from CUNY College of Staten Island",
     coursework: ["Data Structures & Algorithms (CIS 4100)", "Object-Oriented Programming I (CIS 3100)", "Business Statistics I (STA 2000)", "Principles of Accounting (ACC 2101)", "Microeconomics (ECO 1001)", "Business Fundamentals (BUS 2000)"],
   },
 

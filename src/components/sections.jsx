@@ -257,6 +257,7 @@ export function Experience() {
               <div className="tl-body">
                 <h4>{P.education.degree}</h4>
                 <div className="org">{P.education.school}</div>
+                {P.education.prior && <div className="org" style={{ opacity: 0.7 }}>{P.education.prior}</div>}
                 <div className="chips" style={{ marginTop: 4 }}>
                   {P.education.coursework.map((c, i) => (<span className="chip" key={i}>{c}</span>))}
                 </div>

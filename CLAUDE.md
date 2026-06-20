@@ -37,11 +37,12 @@ but Ba.AI answers from `knowledge.js`. If they diverge, the chatbot gives wrong 
 
 ## Current state of Mamadou's profile (keep updated)
 
-- **School:** Baruch College (CUNY), CIS-BBA, Data Analytics concentration, expected May 2028
-- **Availability:** Open to Summer 2027 internships
+- **School:** Baruch College (CUNY), CIS-BBA, Data Analytics concentration, expected May 2028 (transferred from CUNY College of Staten Island). This is the ONE canonical grad date — do not reintroduce CSI / "May 2027" anywhere.
+- **Availability:** Open to Fall 2026 & Summer 2027 internships
 - **Current role:** Operations Analyst & AI Lead at Apex Forum (Mar 2025 – Present)
-- **Upcoming:** Project Management Intern at MTA, HQ Supplier Management (Jun 29 – Aug 14, 2026)
+- **Upcoming (NOT started yet):** Project Management Intern at MTA, HQ Supplier Management (starts Jun 29, 2026) — keep phrased as incoming/future, not in-progress
 - **Location:** New York City area
+- **NOTE:** The resume PDF (public/assets/Mamadou_Ba_Resume.pdf) may still show CSI / "Expected May 2027" — it must be re-exported from Baruch and re-dropped to match the site. Code cannot fix a PDF's contents.
 
 ---
 
