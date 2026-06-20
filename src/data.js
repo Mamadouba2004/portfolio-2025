@@ -10,7 +10,7 @@ const BASE = import.meta.env.BASE_URL;
 export const PORTFOLIO = {
   identity: {
     name: "Mamadou Ba",
-    initials: "MB"
+    initials: "MB",
     role: "AI Engineer · Business Student",
     tagline: "I build intelligent systems that ship.",
     lede: "CIS-BBA student at Baruch College (CUNY) and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — alongside data analytics that drive measurable business impact.",
