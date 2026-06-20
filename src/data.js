@@ -11,11 +11,11 @@ export const PORTFOLIO = {
   identity: {
     name: "Mamadou Ba",
     initials: "MB",
-    role: "AI Engineer · CS Student",
+    role: "AI Engineer · Business Student",
     tagline: "I build intelligent systems that ship.",
-    lede: "CS junior at CUNY College of Staten Island and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — plus data analytics that drive measurable business impact.",
-    location: "Staten Island, NY",
-    availability: "Open to Summer 2026 internships",
+    lede: "CIS-BBA student at Baruch College (CUNY) and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — alongside data analytics that drive measurable business impact.",
+    location: "New York City, NY",
+    availability: "Open to Summer 2027 internships",
     email: "Mamadou.Ba19@login.cuny.edu",
     phone: "(347) 940-2875",
     github: "https://github.com/Mamadouba2004",
@@ -88,14 +88,14 @@ export const PORTFOLIO = {
       demo: null,
     },
     {
-      title: "Relapse Prevention App",
-      sub: "ML · Behavioral Health",
+      title: "Interruption",
+      sub: "Behavioral Health · Mobile App",
       icon: "heart",
       status: "wip",
       statusLabel: "In Progress",
-      desc: "ML-powered behavioral-health application that predicts and helps prevent relapse patterns, built with a TypeScript front end and a machine-learning core.",
-      metrics: [ { b: "TS", s: "+ ML core" }, { b: "Health", s: "real-world use" } ],
-      tech: ["TypeScript", "Machine Learning", "Healthcare"],
+      desc: "Production mobile app implementing the JITAI (Just-In-Time Adaptive Intervention) framework from behavioral health research, with dynamic risk scoring, haptic feedback, and real-time state management across iOS and Android.",
+      metrics: [ { b: "JITAI", s: "clinical framework" }, { b: "iOS+", s: "Android" } ],
+      tech: ["React Native", "TypeScript", "SQLite"],
       repo: "https://github.com/Mamadouba2004/relapse-prevention-app",
       demo: null,
     },
@@ -115,37 +115,55 @@ export const PORTFOLIO = {
 
   experience: [
     {
+      when: "Jun 2026 — Aug 2026", mode: "Manhattan, NY",
+      role: "Project Management Intern", org: "MTA — HQ Supplier Management",
+      bullets: [
+        "Analyzing vendor contract utilization and performance trends for the <b>Metropolitan Transportation Authority</b> HQ Supplier Management team.",
+        "Tracking deliverables and compliance benchmarks, building <b>Excel and Power BI</b> dashboards to surface supplier performance data.",
+        "Supporting process automation and reporting workflows across the supplier management function.",
+      ],
+    },
+    {
       when: "Mar 2025 — Present", mode: "Hybrid",
       role: "Operations Analyst & AI Lead", org: "Apex Forum",
       bullets: [
-        "Shipped <b>Copilot Studio</b> and <b>Power Automate</b> workflows that cut <b>8+ hours</b> of weekly manual work on meeting prep and mentorship matching.",
+        "Designed and deployed <b>Copilot Studio</b> and <b>Power Automate</b> AI automation workflows, presenting solutions to cross-functional teams and cutting <b>8+ hours</b> of manual work weekly.",
         "Built Python and Power BI analytics pipelines processing podcast and community-engagement data, surfacing insights that drove <b>30% growth</b> in member participation across 5+ programs.",
-        "Analyzed where AI automation was — and wasn't — appropriate, delivering recommendations to senior leadership that drove a <b>25% improvement</b> in team efficiency.",
-        "Ran small-group walkthroughs plus runbooks so non-technical staff could maintain AI workflows after handoff.",
+        "Delivered findings to senior leadership in structured reports and briefings, driving a <b>25% improvement</b> in team efficiency.",
+        "Administers the organization's Microsoft 365 environment — Teams, SharePoint, and Power Automate integrations.",
       ],
     },
     {
       when: "May 2026 — Jun 2026", mode: "Staten Island, NY",
       role: "Tech Entrepreneurship Mentor", org: "CSI Innovation Hub × Verizon",
       bullets: [
-        "Facilitated weekly sessions for high-school students in the <b>Verizon Emerging Tech Impact Program</b> — teaching AI tools, business-model design, market research, and product prototyping.",
-        "Mentored Team Purple in designing a Queue Management App for Seniors, from problem identification through user-centered design to a final live <b>Tech Showcase</b> presentation.",
+        "Facilitated weekly workshops for high-school students on AI tools, business-model design, and pitch storytelling in the <b>Verizon Emerging Tech Impact Program</b>.",
+        "Coached student teams to present tech ventures at a live <b>Tech Showcase</b> pitch event.",
+      ],
+    },
+    {
+      when: "Mar 2025 — May 2026", mode: "Staten Island, NY · Part-time",
+      role: "Student Office Assistant", org: "CUNY College of Staten Island",
+      bullets: [
+        "Audited 100+ hyperlinks across CGE, ELI, Study Abroad, and ISSS university websites and delivered a color-coded <b>Excel report</b> with confidence ratings to help staff prioritize fixes.",
+        "Edited and maintained website content using <b>Drupal CMS</b> and formatted course sites on CUNY Academic Commons.",
+        "Co-staffed the <b>Spring 2026 Study Abroad Fair</b>, engaging 100+ student attendees.",
       ],
     },
     {
       when: "Jan 2026 — Jun 2026", mode: "Remote",
       role: "Volunteer Mentor & Project Reviewer", org: "Mouse.org",
       bullets: [
-        "Mentored an NYC special-education CS classroom at P721Q JFK Jr. School through the <b>AI League</b> program, giving feedback on student app prototypes and pitches.",
-        "Served as a project reviewer for the <b>Emoti-Con NYC</b> Youth Tech Expo, evaluating 10 student projects across health, civic tech, and community categories.",
+        "Mentored an NYC special-education CS classroom through the <b>AI League</b> program, giving feedback on student app prototypes and pitches.",
+        "Served as project reviewer for the <b>Emoti-Con NYC</b> Youth Tech Expo, evaluating student projects across health, civic tech, and community categories.",
       ],
     },
   ],
 
   education: {
-    school: "CUNY — College of Staten Island",
-    degree: "B.S. Computer Science",
-    grad: "Expected May 2027",
+    school: "Baruch College — CUNY",
+    degree: "BBA, Computer Information Systems · Data Analytics",
+    grad: "Expected May 2028",
     coursework: ["Data Structures & Algorithms (C++)", "Intro to Data Science (Python)", "Computer Organization", "Discrete Mathematics", "Calculus III", "Linear Algebra"],
   },
 
