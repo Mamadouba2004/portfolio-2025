@@ -16,6 +16,7 @@ export const PORTFOLIO = {
     lede: "CIS-BBA student at Baruch College (CUNY) and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — alongside data analytics that drive measurable business impact.",
     location: "New York City, NY",
     availability: "Open to Summer 2027 internships",
+    currentRole: "AI Lead @ Apex Forum · since Mar 2025",
     email: "Mamadou.Ba19@login.cuny.edu",
     phone: "(347) 940-2875",
     github: "https://github.com/Mamadouba2004",
@@ -164,6 +165,7 @@ export const PORTFOLIO = {
     school: "Baruch College — CUNY",
     degree: "BBA, Computer Information Systems · Data Analytics",
     grad: "Expected May 2028",
+    years: "2024 — 2028",
     coursework: ["Data Structures & Algorithms (CIS 4100)", "Object-Oriented Programming I (CIS 3100)", "Business Statistics I (STA 2000)", "Principles of Accounting (ACC 2101)", "Microeconomics (ECO 1001)", "Business Fundamentals (BUS 2000)"],
   },
 

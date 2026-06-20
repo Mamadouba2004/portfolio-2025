@@ -59,6 +59,10 @@ export default {
       }
       // best-effort increment; expire after ~25h so the bucket self-cleans
       await env.RATE_KV.put(key, String(used + 1), { expirationTtl: 90000 });
+    } else {
+      // No KV binding — per-IP rate limiting is inactive. Surface this in logs
+      // so a missing binding in a deployed environment doesn't go unnoticed.
+      console.warn('[baai-chat] RATE_KV binding missing — per-IP rate limiting is disabled.');
     }
 
     // ---- build Gemini request ----
@@ -79,7 +83,9 @@ export default {
       systemInstruction: system ? { parts: [{ text: system }] } : undefined,
       contents,
       generationConfig: { temperature: 0.6, maxOutputTokens: MAX_OUTPUT_TOKENS },
-      safetySettings: [],
+      // Omit safetySettings so Gemini applies its default content filters. The
+      // system prompt is supplied by the browser, so default filtering is the
+      // backstop against a tampered prompt eliciting unfiltered output.
     };
 
     try {
@@ -110,19 +116,32 @@ function allowedList(env) {
 }
 function isAllowedOrigin(origin, env) {
   const list = allowedList(env);
-  if (list.length === 0) return true; // not configured => allow (dev)
+  if (list.length === 0) {
+    // No allowlist configured — open to all origins. Intended only for local
+    // dev; in production ALLOWED_ORIGINS must be set. Log loudly so a missing
+    // env var in a deployed environment is visible in the Worker logs.
+    console.warn('[baai-chat] ALLOWED_ORIGINS is unset — CORS is open to all origins.');
+    return true;
+  }
   return list.includes(origin);
 }
 function corsHeaders(origin, env) {
   const list = allowedList(env);
-  const allow = (list.length === 0 || list.includes(origin)) ? (origin || '*') : list[0] || '*';
-  return {
-    'Access-Control-Allow-Origin': allow,
+  const headers = {
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400',
     'Vary': 'Origin',
   };
+  // Only echo Access-Control-Allow-Origin for callers we actually allow. A
+  // blocked origin gets no ACAO header (browser blocks it) and we never leak
+  // the configured allowlist to an unauthorized caller.
+  if (list.length === 0) {
+    headers['Access-Control-Allow-Origin'] = origin || '*'; // unconfigured => dev
+  } else if (list.includes(origin)) {
+    headers['Access-Control-Allow-Origin'] = origin;
+  }
+  return headers;
 }
 function json(obj, status, cors) {
   return new Response(JSON.stringify(obj), {

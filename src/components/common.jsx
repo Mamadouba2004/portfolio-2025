@@ -95,12 +95,19 @@ export function Reveal({ children, className = '', delay = 0, tag = 'div' }) {
   );
 }
 
-/* ---- tiny markdown: **bold**, [text](url), \n ---- */
+/* ---- tiny markdown: **bold**, [text](url), \n ----
+   Links only render for safe schemes (https/http/mailto/tel); anything else
+   (e.g. javascript:) falls back to plain text to avoid XSS via the
+   dangerouslySetInnerHTML render path in Chat.jsx. */
+const SAFE_URL = /^(https?:|mailto:|tel:)/i;
 export function mdToHtml(s) {
   if (!s) return '';
   return s
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, text, url) =>
+      SAFE_URL.test(url.trim())
+        ? `<a href="${url.trim().replace(/"/g, '&quot;')}" target="_blank" rel="noopener noreferrer">${text}</a>`
+        : text)
     .replace(/\n/g, '<br/>');
 }

@@ -40,8 +40,13 @@ function NeuralCanvas({ active }) {
       const m = hx.replace('#', ''); const n = parseInt(m.length === 3 ? m.split('').map(c => c + c).join('') : m, 16);
       return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
     }
+    // Read --accent once and refresh only when the theme/mode attributes change,
+    // instead of calling getComputedStyle (a forced style recalc) every frame.
+    let rgb = hex2rgb(accent());
+    const attrObserver = new MutationObserver(() => { rgb = hex2rgb(accent()); });
+    attrObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-mode'] });
     function draw() {
-      const [r, g, b] = hex2rgb(accent());
+      const [r, g, b] = rgb;
       ctx.clearRect(0, 0, w, h);
       for (const n of nodes) {
         n.x += n.vx; n.y += n.vy;
@@ -75,6 +80,7 @@ function NeuralCanvas({ active }) {
     document.addEventListener('visibilitychange', onVisibility);
     return () => {
       cancelAnimationFrame(raf);
+      attrObserver.disconnect();
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', onVisibility);
     };

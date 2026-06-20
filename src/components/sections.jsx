@@ -130,8 +130,8 @@ export function About() {
             </Reveal>
             <Reveal delay={120}>
               <div className="about-body">
-                <p>I'm a Computer Science junior at {P.education.school} and the AI Lead at Apex Forum, where I ship automation and analytics that teams actually rely on. My focus is production-minded AI: retrieval quality, output guardrails, and evaluation harnesses that catch failure before it reaches a user.</p>
-                <p>I care about rigor — C++ data structures from first principles, ML models I can defend, and metrics I can prove. I'm pursuing AI/ML engineering and quantitative finance roles.</p>
+                <p>I'm a {P.education.degree} student at {P.education.school} and the AI Lead at Apex Forum, where I ship automation and analytics that teams actually rely on. My focus is production-minded AI: retrieval quality, output guardrails, and evaluation harnesses that catch failure before it reaches a user.</p>
+                <p>I care about rigor — C++ data structures from first principles, ML models I can defend, and metrics I can prove. I'm pursuing technology consulting, AI/ML engineering, and data analytics roles.</p>
               </div>
             </Reveal>
             <Reveal delay={180}>
@@ -189,7 +189,9 @@ function ProjectCard({ pr }) {
         {pr.demo && (
           <a className="btn btn-primary btn-sm" href={pr.demo} target="_blank" rel="noopener noreferrer"><Icon name="external" />Live Demo</a>
         )}
-        <a className="btn btn-ghost btn-sm" href={pr.repo} target="_blank" rel="noopener noreferrer"><Icon name="github" />View Code</a>
+        {pr.repo && (
+          <a className="btn btn-ghost btn-sm" href={pr.repo} target="_blank" rel="noopener noreferrer"><Icon name="github" />View Code</a>
+        )}
       </div>
     </div>
   );
@@ -249,7 +251,7 @@ export function Experience() {
           <Reveal delay={60}>
             <div className="tl-item">
               <div className="tl-when">
-                <b>2023 — 2027</b>
+                <b>{P.education.years}</b>
                 <span className="loc"><Icon name="cap" style={{ width: 13, height: 13 }} />{P.education.grad}</span>
               </div>
               <div className="tl-body">
@@ -323,7 +325,7 @@ export function ResumeSec() {
             <p>Everything on this site, distilled. Open it inline or take a copy with you.</p>
             <div className="resume-facts">
               <div className="rfact"><span className="ic"><Icon name="cap" /></span><div>{P.education.degree} · <b>{P.education.school}</b></div></div>
-              <div className="rfact"><span className="ic"><Icon name="brief" /></span><div>AI Lead <b>@ Apex Forum</b> · since Mar 2025</div></div>
+              <div className="rfact"><span className="ic"><Icon name="brief" /></span><div>{id.currentRole}</div></div>
               <div className="rfact"><span className="ic"><Icon name="pin" /></span><div>{id.location} · <b>{id.availability}</b></div></div>
             </div>
             <div className="hero-cta">
@@ -386,7 +388,7 @@ export function Contact() {
         <Reveal className="glass contact-card">
           <span className="eyebrow" style={{ justifyContent: 'center' }}>Let's talk</span>
           <h2>Building something<br />intelligent? <span className="gtext">Let's chat.</span></h2>
-          <p>I'm open to Summer 2026 internships in AI/ML, software, data, and quant. The inbox is always open.</p>
+          <p>{id.availability} in technology consulting, AI/ML engineering, and data analytics. The inbox is always open.</p>
           <div className="contact-cta">
             <a className="btn btn-primary" href={`mailto:${id.email}?subject=Let's talk — opportunity for Mamadou`}><Icon name="mail" />{id.email}</a>
             <a className="btn btn-ghost" href={id.resume} target="_blank" rel="noopener noreferrer"><Icon name="download" />Resume</a>
@@ -395,7 +397,7 @@ export function Contact() {
             <a className="social-btn" href={id.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Icon name="github" /></a>
             <a className="social-btn" href={id.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" /></a>
             <a className="social-btn" href={`mailto:${id.email}`} aria-label="Email"><Icon name="mail" /></a>
-            <a className="social-btn" href={`tel:${id.phone.replace(/[^0-9+]/g, '')}`} aria-label="Phone"><Icon name="phone" /></a>
+            {id.phone && <a className="social-btn" href={`tel:${id.phone.replace(/[^0-9+]/g, '')}`} aria-label="Phone"><Icon name="phone" /></a>}
           </div>
         </Reveal>
         <div className="footer-base">
