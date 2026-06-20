@@ -164,7 +164,7 @@ export const PORTFOLIO = {
     school: "Baruch College — CUNY",
     degree: "BBA, Computer Information Systems · Data Analytics",
     grad: "Expected May 2028",
-    coursework: ["Data Structures & Algorithms (C++)", "Intro to Data Science (Python)", "Computer Organization", "Discrete Mathematics", "Calculus III", "Linear Algebra"],
+    coursework: ["Data Structures & Algorithms (CIS 4100)", "Object-Oriented Programming I (CIS 3100)", "Business Statistics I (STA 2000)", "Principles of Accounting (ACC 2101)", "Microeconomics (ECO 1001)", "Business Fundamentals (BUS 2000)"],
   },
 
   tech: [
