@@ -31,6 +31,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Set this in: repo Settings → Secrets and variables → Actions → Variables.
+          # If unset, the chat falls back to local keyword retrieval (site still works).
+          VITE_CHAT_API_URL: ${{ vars.VITE_CHAT_API_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

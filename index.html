@@ -1,13 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="aurora" data-mode="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Mamadou Ba - AI Developer & CS Student. Building intelligent systems and solving complex problems with data." />
-    <meta name="keywords" content="AI Developer, Machine Learning, Python, React, Portfolio" />
+    <meta name="description" content="Mamadou Ba — AI Engineer & CS student. RAG systems, agents, and data analytics that ship. Open to Summer 2026 internships." />
+    <meta name="keywords" content="AI Engineer, Machine Learning, RAG, Python, React, Portfolio" />
     <meta name="author" content="Mamadou Ba" />
-    <title>Mamadou Ba | AI Developer & CS Student</title>
+    <title>Mamadou Ba — AI Engineer</title>
+    <script>
+      // set theme/mode before paint to avoid a flash of the wrong theme
+      (function () {
+        try {
+          document.documentElement.setAttribute('data-theme', localStorage.getItem('mb_theme') || 'aurora');
+          document.documentElement.setAttribute('data-mode', localStorage.getItem('mb_mode') || 'dark');
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
