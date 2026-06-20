@@ -10,7 +10,7 @@ const BASE = import.meta.env.BASE_URL;
 export const PORTFOLIO = {
   identity: {
     name: "Mamadou Ba",
-    initials: "MB",
+    initials: "MB"
     role: "AI Engineer · Business Student",
     tagline: "I build intelligent systems that ship.",
     lede: "CIS-BBA student at Baruch College (CUNY) and AI Lead at Apex Forum. I design production-minded AI — RAG pipelines, agents, and evaluation harnesses — alongside data analytics that drive measurable business impact.",
@@ -48,7 +48,7 @@ export const PORTFOLIO = {
       desc: "End-to-end RAG system on the Claude API with a retrieval pipeline, orchestration logic, configurable scoring modes, and output guardrails that validate every model response before delivery.",
       metrics: [ { b: "12", s: "check eval harness" }, { b: "3", s: "adversarial profiles" }, { b: "100%", s: "pass rate pre-deploy" } ],
       tech: ["Python", "LangChain", "Claude API", "Streamlit"],
-      repo: "https://github.com/Mamadouba2004/applied-ai-system-project",
+      repo: "https://github.com/Mamadouba2004/vibefinder",
       demo: "https://vibefinder-rag.streamlit.app/",
     },
     {
@@ -61,7 +61,7 @@ export const PORTFOLIO = {
       desc: "Public Hugging Face Space answering plain-language questions about university courses from 1,700+ real student reviews — grounded generation, programmatic source attribution, and a hard refusal when retrieved context is insufficient.",
       metrics: [ { b: "1,700+", s: "student reviews" }, { b: "5/5", s: "eval accuracy" }, { b: "0", s: "hallucinations" } ],
       tech: ["Python", "ChromaDB", "Groq", "Gradio"],
-      repo: "https://github.com/Mamadouba2004/codepath-ai201-module1",
+      repo: "https://github.com/Mamadouba2004/unofficial-guide-rag",
       demo: "https://huggingface.co/spaces/adouu/uw-course-guide",
     },
     {
@@ -73,7 +73,7 @@ export const PORTFOLIO = {
       desc: "Quantified the financial impact of poor data quality across 10,000+ logistics records using ML anomaly detection, then delivered data-governance recommendations from root-cause analysis.",
       metrics: [ { b: "10k+", s: "records analyzed" }, { b: "$2.3M", s: "annual cost found" } ],
       tech: ["Python", "Pandas", "scikit-learn", "Power BI"],
-      repo: "https://github.com/Mamadouba2004/data-science-final-project",
+      repo: "https://github.com/Mamadouba2004/retail-logistics-data-quality",
       demo: null,
     },
     {
@@ -109,7 +109,7 @@ export const PORTFOLIO = {
       desc: "A Battleship-style strategy game with AI opponents featuring probability-based targeting and recursive placement algorithms.",
       metrics: [ { b: "A*", s: "search + heuristics" }, { b: "AI", s: "probabilistic targeting" } ],
       tech: ["Python", "Algorithms", "Game AI"],
-      repo: "https://github.com/Mamadouba2004/astar-game",
+      repo: "https://github.com/Mamadouba2004/battleship-ai",
       demo: null,
     },
   ],
