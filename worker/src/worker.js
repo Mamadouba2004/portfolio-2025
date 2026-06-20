@@ -12,7 +12,7 @@
    Vars (wrangler.toml [vars]):
      - ALLOWED_ORIGINS (comma-separated)  e.g. "https://mamadouba2004.github.io"
      - DAILY_LIMIT     (per-IP requests/day, default 40)
-     - GEMINI_MODEL    (default "gemini-2.0-flash")
+     - GEMINI_MODEL    (default "gemini-2.5-flash")
    ============================================================ */
 
 const MAX_QUESTION_CHARS = 600;   // reject anything longer
@@ -77,7 +77,7 @@ export default {
     while (contents.length && contents[0].role === 'model') contents.shift();
     contents.push({ role: 'user', parts: [{ text: question }] });
 
-    const model = env.GEMINI_MODEL || 'gemini-2.0-flash';
+    const model = env.GEMINI_MODEL || 'gemini-2.5-flash';
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${env.GEMINI_API_KEY}`;
     const body = {
       systemInstruction: system ? { parts: [{ text: system }] } : undefined,
