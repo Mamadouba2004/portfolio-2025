@@ -62,7 +62,7 @@ export const PORTFOLIO = {
       metrics: [ { b: "1,700+", s: "student reviews" }, { b: "5/5", s: "eval accuracy" }, { b: "0", s: "hallucinations" } ],
       tech: ["Python", "ChromaDB", "Groq", "Gradio"],
       repo: "https://github.com/Mamadouba2004/unofficial-guide-rag",
-      demo: "https://huggingface.co/spaces/adouu/uw-course-guide",
+      demo: "https://adouu-uw-course-guide.hf.space/",
     },
     {
       title: "Interruption",
@@ -110,7 +110,7 @@ export const PORTFOLIO = {
       metrics: [ { b: "3", s: "agent tools" }, { b: "70B", s: "LLaMA-3.3 (Groq)" } ],
       tech: ["Python", "Groq", "LLaMA 3.3", "Gradio"],
       repo: "https://github.com/Mamadouba2004/fitfindr",
-      demo: "https://huggingface.co/spaces/adouu/fitfindr",
+      demo: "https://adouu-fitfindr.hf.space/",
     },
   ],
 
