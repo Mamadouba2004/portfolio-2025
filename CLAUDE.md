@@ -33,6 +33,14 @@ or availability in `data.js`, you MUST update `knowledge.js` (both SYSTEM_PROMPT
 FACTS entries) in the same commit. This is the "butterfly effect" — the site renders from `data.js`
 but Ba.AI answers from `knowledge.js`. If they diverge, the chatbot gives wrong info.
 
+**Knowledge-only layer.** The `SYSTEM_PROMPT` has an `=== EXTRA CONTEXT (not shown on the site) ===`
+section near the end. This is the place for facts about Mamadou that the chatbot should know but
+that do NOT appear anywhere on the visual site — hackathons, certifications, talks, side projects,
+what he's currently learning, work style, interests, etc. The sync rule runs ONE direction here:
+everything on the site must be in knowledge.js, but knowledge.js may hold extra facts the site
+doesn't show. When the user says "remember this about me" or "the bot should know X," add it to
+EXTRA CONTEXT (and optionally a FACTS entry for the offline bot) — no data.js change needed.
+
 ---
 
 ## Current state of Mamadou's profile (keep updated)
