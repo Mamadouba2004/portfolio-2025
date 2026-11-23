@@ -48,7 +48,7 @@ EXTRA CONTEXT (and optionally a FACTS entry for the offline bot) — no data.js 
 - **School:** Baruch College (CUNY), CIS-BBA, Data Analytics concentration, expected May 2028 (transferred from CUNY College of Staten Island). This is the ONE canonical grad date — do not reintroduce CSI / "May 2027" anywhere.
 - **Availability:** Open to Summer 2027 internships
 - **Current role:** Operations Analyst & AI Lead at Apex Forum (Mar 2025 – Present)
-- **MTA:** Project Management Intern, HQ Supplier Management, COMPLETED Jun 29 – Aug 14, 2026. Four projects handed off live. 93% AI Builder accuracy and ~48 hrs/year are the only locked metrics; Apex "30% growth" claim removed (unconfirmed).
+- **MTA:** Project Management Intern, HQ Supplier Management, COMPLETED Jun 29 – Aug 14, 2026. Four projects handed off live. 93% AI Builder accuracy and ~48 hrs/year are the only locked metrics;
 - **Leadership:** Speaker & Partnership Lead, Collegiate Entrepreneurs' Organization at Baruch (Sept 2026 – present)
 - **Location:** New York City area
 - **NOTE:** The resume PDF (public/assets/Mamadou_Ba_Resume.pdf) may still show CSI / "Expected May 2027" — it must be re-exported from Baruch and re-dropped to match the site. Code cannot fix a PDF's contents.
